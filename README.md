@@ -1,6 +1,6 @@
 # MD5 Message-Digest Algorithm
 
-This is an edited version of the reference implementation found in [RFC1321](docs/rfc1321.txt). None of the core algorithm has been touched, only bugfixes for 64-bit machines, some formatting changes, and some functions were removed from the driver code.
+This is an edited reference implementation of the MD5 algorithm, derived from the RSA Data Security, Inc. MD5 Message-Digest Algorithm ([RFC1321](https://www.rfc-editor.org/rfc/rfc1321.txt)). None of the core functionality of the algorithm has been touched, only bugfixes for 64-bit machines, some formatting changes, and some functions were removed from the driver code.
 
 ## Changes
 
@@ -39,3 +39,6 @@ MD5 ("The quick brown fox jumped over the lazy dog") = 08a008a01d498c404b0c30852
 $ ./bin/md5 docs/rfc1321.txt
 MD5 (docs/rfc1321.txt) = dbb140ad9ec3ec8d922df2573e018f89
 ```
+
+## References
+- Rivest, R., "The MD5 Message-Digest Algorithm", RFC 1321, DOI 10.17487/RFC1321, April 1992, <https://www.rfc-editor.org/info/rfc1321>.
