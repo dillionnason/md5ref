@@ -1,14 +1,14 @@
-# MD5 Reference Implementation
+# MD5 Message-Digest Algorithm
 
-This is an edited version of the reference implementation found in [RFC1321](docs/rfc1321.txt). None of the core functionality has been touched, only bugfixes for 64-bit machines and formatting changes have been made.
+This is an edited version of the reference implementation found in [RFC1321](docs/rfc1321.txt). None of the core algorithm has been touched, only bugfixes for 64-bit machines, some formatting changes, and some functions were removed from the driver code.
 
 ## Changes
 
 - Most importantly the definitions found in [global.h](src/global.h) have been replaced throughout with uint32_t and uint16_t. The original implementation does not work on 64-bit machines otherwise.
 - Function prototypes have been updated to a more modern style.
 - Formatting has been changed throughout to improve readability.
-- The MD2 and MD4 functionality has been removed.
-- MD5TimeTrial() was not functioning properly, as it was not relevant to our implementation it was removed.
+- The MD2 and MD4 functionality has been removed, the algorithms were not part of the reference implementation.
+- MD5TimeTrial() was not functioning properly and was removed.
 - MDFilter() was not functioning properly, so it has been updated to use fgets() instead of fread(), and now passes the string to MDString() rather than doing the MD5 setup itself.
 
 ## Use 
