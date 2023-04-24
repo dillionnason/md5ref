@@ -2,6 +2,10 @@
 
 This is an edited reference implementation of the MD5 algorithm, derived from the RSA Data Security, Inc. MD5 Message-Digest Algorithm ([RFC1321](https://www.rfc-editor.org/rfc/rfc1321.txt)). None of the core functionality of the algorithm has been touched, only bugfixes for 64-bit machines, some formatting changes, and some functions were removed from the driver code.
 
+## Disclaimer
+
+***MD5 is not a cryptographically secure algorithm.*** This project is purely for educational purposes, I make no assurances about security or functionality.
+
 ## Changes
 
 - Most importantly the definitions found in [global.h](src/global.h) have been replaced throughout with uint32_t and uint16_t. The original implementation does not work on 64-bit machines otherwise.
@@ -42,3 +46,5 @@ MD5 (docs/rfc1321.txt) = dbb140ad9ec3ec8d922df2573e018f89
 
 ## References
 - Rivest, R., "The MD5 Message-Digest Algorithm", RFC 1321, DOI 10.17487/RFC1321, April 1992, <https://www.rfc-editor.org/info/rfc1321>.
+- Turner, S. and L. Chen, "Updated Security Considerations for the MD5 Message-Digest and the HMAC-MD5 Algorithms", RFC 6151, DOI 10.17487/RFC6151, March 2011, <https://www.rfc-editor.org/info/rfc6151>.
+
